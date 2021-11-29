@@ -10,6 +10,7 @@ func main() {
 	router := gin.Default()
 	router.Static("/view", "./view")
 	router.GET("/api/session", controller.GetSession)
+	router.GET("/api/imagecode/:uuid", controller.GetImageCode)
 	// router.GET("/", func(c *gin.Context) {
 	// 	c.Writer.WriteString("项目开始了。。。")
 	// })
